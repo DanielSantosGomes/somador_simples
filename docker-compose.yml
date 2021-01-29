@@ -8,8 +8,6 @@ services:
         image: piupiu/cfy_client
         ports:
             - "3000:3000"
-        volumes:
-            - ./client:/usr/src/app
     backend:
         container_name: cfy_server
         build:
@@ -18,8 +16,6 @@ services:
         image: piupiu/cfy_server
         ports:
             - "5000:5000"
-        volumes:
-            - ./server:/usr/src/app
 
 networks:
       default:

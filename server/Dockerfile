@@ -1,11 +1,10 @@
-FROM node:lts-slim
+FROM node:13.12.0-alpine
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY package.json .
+COPY . .
 RUN npm install
 RUN npm install nodemon -g
-COPY . .
 
 EXPOSE 5000
 
